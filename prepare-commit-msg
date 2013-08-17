@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Randomly selects a commit messsage from whatthecommit.com
+#
+echo $(curl https://raw.github.com/ngerakines/commitment/master/commit_messages.txt | sort -R | head -n 1) > "$1"
